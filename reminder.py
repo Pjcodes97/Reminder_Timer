@@ -50,7 +50,7 @@ def reset():
 #Creating Parent Window
 root = Tk()
 root.title("Stand Up and Stretch")
-root.geometry("500x500")
+root.geometry("500x400")
 
 #Creating a regular clock to keep track of time in general
 clock = Label(root)
@@ -58,16 +58,24 @@ clock.pack()
 clock_timer()
 
 #Creates label for the countdown/ stopwatch
-timer = Label(root, text=f"{hour}:{minute}:{second}")
+timer = Label(root, 
+            text=f"{hour}:{minute}:{second}"
+            )
 timer.pack()
 
 
 #Creating start and stop buttons to begin timer for reminders
-start_button = Button(root, text="Start", command=countdown)
+start_button = Button(root, 
+                    text="Start", 
+                    command=countdown
+                    )
 start_button.pack()
 
 #Create button for reseting the timer back to zero
-reset_button = Button(root, text="Reset", command=reset)
+reset_button = Button(root, 
+                    text="Reset", 
+                    command=reset
+                    )
 reset_button.pack()
 
 #Create label where "Get Up" Alarm/Warning will display
