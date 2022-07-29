@@ -23,6 +23,7 @@ def clock_timer():
 #Creates timer leading up the "alarm"
 def countdown():
     global second, minute, hour
+    start_button.config(state="disabled")
     second += 1
     if second == 60:
         minute += 1 
@@ -38,7 +39,7 @@ def countdown():
 def get_up_alert():
     global second, minute, hour
     string = "Time to take a break! Get up!"
-    if second == 10:
+    if hour == 1:
         get_up_label.config(text=string, style='my.TLabel')
         alarm_sound()
     get_up_label.after(1000, get_up_alert)
